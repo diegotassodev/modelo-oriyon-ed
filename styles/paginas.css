@@ -1,3 +1,11 @@
+:root {
+    --primary-background-color: #202d36;
+    --secondary-background-color: #2b3743;
+    --secondary-back-color-hover: #3a4656;
+    --primary-font: "Montserrat", sans-serif; 
+    --font-color: #faffff;
+}
+
 .principal {
     display: flex;
     flex-direction: row;
@@ -34,4 +42,11 @@
 
 .apresentacao__imagem {
     width: 20vh;
+}
+
+.paragrafo__tabela td, .paragrafo__tabela th {
+    text-align: center;
+    border: 1px solid var(--font-color);
+    padding: 4px;
+    border-spacing: 0px;
 }
