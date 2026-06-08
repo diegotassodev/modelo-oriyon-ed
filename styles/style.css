@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-background-color: #202d36;
+    --secondary-background-color: #2b3743;
+    --secondary-back-color-hover: #3a4656;
+    --primary-font: "Montserrat", sans-serif; 
+    --font-color: #faffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--secondary-background-color);
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.cabecalho {
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    width: 40vh;
+}
+
+.cabecalho__sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__titulo {
+    font-size: 1.6em;
+    font-weight: 400;
+    margin-left: 3vh;
+    margin: 30px;
+}
+
+.sidebar__item {
+    color: var(--font-color);
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 2vh;
+}
+
+.sidebar__item:hover {
+    background-color: #3a4656;
+}
+
+.apresentacao {
+    margin-top: 10vh;
+    padding: 10vh;
+    background-color: var(--primary-background-color);
+    width: 100%;
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    flex-direction: column;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.apresentacao__titulo {
+    font-weight: 400;
+}
+
+.apresentacao__paragrafo {
+    font-size: 1em;
+}
+
+.apresentacao__imagem {
+    width: 20vh;
+}
+
+.apresentacao__resumos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.apresentacao__pagina {
+    width: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 30px;
+    border: 2px solid var(--primary-background-color);
+    background-color: var(--secondary-background-color);
+
+}
+
+.pagina__imagem {
+    width: 100%;
+}
+
+.pagina__link {
+    color: var(--font-color);
+    font-size: 1.6em;
+    border: 2px solid var(--font-color);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.pagina__link:hover {
+    background-color: var(--primary-background-color);
+}
+
+.rodape {
+    background-color: black;
+    padding: 20px 0 10px 0;
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

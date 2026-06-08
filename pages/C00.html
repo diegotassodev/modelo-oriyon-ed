@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/paginas.css">
+    <script src="https://kit.fontawesome.com/e574d3c03d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark-dimmed.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <div class = "principal">
+        <header class = "cabecalho">
+            <nav class = "cabecalho__sidebar">
+                <h1 class = "sidebar__titulo"> Dashboard</h1>
+                <a class = "sidebar__item" href="index.html"><i class="fa-regular fa-house"></i> Início </a>
+                <h1 class = "sidebar__titulo">Aulas</h1>
+                <a class = "sidebar__item" href="c.html"><i class="fa-solid fa-book"></i>Linguagem C</a>
+                <h1 class = "sidebar__titulo">Alunos</h1>
+                <a class = "sidebar__item" href="zyno.html"><i class="fa-solid fa-person"></i></i>Zyno</a>
+                <a class = "sidebar__item" href="veiga.html"><i class="fa-solid fa-person"></i></i>Veiga</a>
+            </nav>
+        </header>
+        <main class = "apresentacao">
+
+            <h1 class = "apresentacao__titulo">Como surgiu a Linguagem C?</h1>
+            <p class = "apresentacao__paragrafo">
+                A linguagem C surgiu em 1972 como uma evolução de outra linguagem criada por Ken Thompson, chamada B. Inicialmente, não existia um padrão único para a linguagem, o que fazia com que diferentes organizações utilizassem implementações distintas. Com o tempo, essas organizações se uniram para definir um padrão oficial para o C, garantindo maior compatibilidade entre compiladores e sistemas.
+            </p> 
+
+            <h1 class = "apresentacao__titulo">Por que programar em C?</h1>       
+            <p class = "apresentacao__paragrafo">
+                - COBOL foi criada para o processamento de registros e aplicações comerciais. <br>
+                - Pascal foi desenvolvida com foco no ensino de programação. <br>
+                - FORTRAN foi projetada para cálculos científicos. <br>
+                - LISP e PROLOG foram desenvolvidas para aplicações na área de Inteligência Artificial. <br> <br>
+
+                Diferentemente dessas linguagens, C é extremamente versátil e pode ser utilizada em praticamente qualquer tipo de projeto, desde sistemas operacionais até compiladores. <br> <br>
+
+                A linguagem oferece desempenho próximo ao Assembly, além de ser simples, portátil, popular e modular. Com ela, também é possível manipular diretamente a memória por meio dos endereços dos objetos. O C permite o uso de macros e fornece grande liberdade ao programador para implementar soluções da forma que considerar mais adequada.
+            </p>
+
+            <h1 class = "apresentacao__titulo">Filosofia do C</h1>       
+            <p class = "apresentacao__paragrafo">
+                Em C, é mais fácil implementar módulos independentes, seguindo uma abordagem semelhante à componentização, o que contribui para a qualidade e manutenção de cada parte do sistema. <br> <br>
+
+                Essa filosofia foi fortemente influenciada pelo UNIX, cujo princípio é fazer uma tarefa de cada vez e fazê-la bem, permitindo que pequenos componentes trabalhem juntos para atingir objetivos maiores.
+            </p>
+
+            <h1 class = "apresentacao__titulo">C vs C++</h1>       
+            <p class = "apresentacao__paragrafo">
+                O C++ pode ser visto como uma extensão da linguagem C, adicionando recursos como classes, programação orientada a objetos, sobrecarga de operadores, templates e diversas outras funcionalidades. <br> <br>
+
+                Embora mantenha grande compatibilidade com C, o C++ é uma linguagem consideravelmente mais ampla e complexa.
+            </p>
+
+            <h1 class = "apresentacao__titulo">Ciclo de Desenvolvimento</h1> 
+
+            <h2 class = "apresentacao__subtitulo">1. Escrever o código-fonte</h2>
+            <p class = "apresentacao__paragrafo"> O primeiro passo é escrever o programa em um arquivo com extensão .c.</p>
+
+            <h2 class = "apresentacao__subtitulo">2. Compilar o programa</h2>
+            <p class = "apresentacao__paragrafo"> 
+                A compilação verifica se o código está correto. Durante esse processo, o compilador pode detectar erros e emitir avisos (warnings) sobre possíveis problemas. <br>
+                Se não houver erros, será gerado um arquivo-objeto (.obj em alguns sistemas).
+                <br> <br>
+                Exemplos de compilação:
+                <pre> <code class="language-sh" style = "border-radius: 20px;">
+
+// Turbo C
+tcc programa.c
+
+// Unix
+cc programa.c
+                </code></pre>
+            </p>
+
+            <h2 class = "apresentacao__subtitulo">3. Realizar a linkagem</h2>
+            <p class = "apresentacao__paragrafo"> 
+                Nesta etapa, o executável é criado a partir dos arquivos-objeto e das bibliotecas utilizadas pelo programa. <br>
+                Em sistemas DOS, as bibliotecas costumam possuir extensão .LIB, enquanto em sistemas Unix a extensão mais comum é .out <br>
+                O responsável por essa fase é o Linker, que reúne todos os arquivos-objeto em um único executável. A linkagem pode falhar caso alguma função, biblioteca ou símbolo necessário não seja encontrado. <br>
+                Para definir o nome do executável gerado, utilize a opção -o. Caso ela não seja especificada, o compilador geralmente criará um executável chamado a.out.
+                <pre> <code class="c" style = "border-radius: 20px;">
+
+gcc program.c -o programa
+
+                </code></pre>
+            </p>
+
+            <h2 class = "apresentacao__subtitulo">4. Executar o programa</h2>
+            <p class = "apresentacao__paragrafo"> 
+                Após a geração do executável, basta executá-lo pelo terminal.
+
+                <pre> <code class="language-sh" style = "border-radius: 20px;">
+./programa.out
+                </code></pre>
+
+            Se o programa não funcionar corretamente, o problema provavelmente está na lógica implementada pelo desenvolvedor ou em algum erro que não foi detectado durante a compilação.
+            </p>
+        </main>
+    </div>
+    <footer class = "rodape">
+        <p> © 2026 Diego Tasso. Todos os direitos reservados.</p>
+        <p>Este é um produto privado e proprietário. A reprodução, distribuição, modificação ou compartilhamento deste material, total ou parcialmente, sem autorização prévia por escrito, é estritamente proibida.</p>
+        
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

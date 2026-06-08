@@ -1,0 +1,37 @@
+.principal {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.apresentacao {
+    margin-top: 10vh;
+    padding: 10vh;
+    background-color: var(--primary-background-color);
+    width: 100%;
+    color: var(--font-color);
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.apresentacao__titulo {
+    font-weight: 600;
+    font-size: 2em
+}
+
+.apresentacao__subtitulo {
+    font-weight: 600;
+    font-size: 1.5em
+}
+
+.apresentacao__paragrafo {
+    font-size: 1em;
+}
+
+.apresentacao__imagem {
+    width: 20vh;
+}

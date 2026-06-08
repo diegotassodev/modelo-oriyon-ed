@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/paginas.css">
+    <script src="https://kit.fontawesome.com/e574d3c03d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark-dimmed.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <div class = "principal">
+        <header class = "cabecalho">
+            <nav class = "cabecalho__sidebar">
+                <h1 class = "sidebar__titulo"> Dashboard</h1>
+                <a class = "sidebar__item" href="index.html"><i class="fa-regular fa-house"></i> Início </a>
+                <h1 class = "sidebar__titulo">Aulas</h1>
+                <a class = "sidebar__item" href="c.html"><i class="fa-solid fa-book"></i>Linguagem C</a>
+                <h1 class = "sidebar__titulo">Alunos</h1>
+                <a class = "sidebar__item" href="zyno.html"><i class="fa-solid fa-person"></i></i>Zyno</a>
+                <a class = "sidebar__item" href="veiga.html"><i class="fa-solid fa-person"></i></i>Veiga</a>
+            </nav>
+        </header>
+        <main class = "apresentacao">
+
+            <h1 class = "apresentacao__titulo">Introdução</h1>
+            <p class = "apresentacao__paragrafo">
+                Um programa é uma sequência de instruções que pode ser interpretada e executada pelo computador para resolver um determinado problema. Em C, a execução do programa começa na função main(), e todo o código pertencente a essa função deve ser colocado entre { }, formando um bloco.
+
+                <pre> <code class="c" style = "border-radius: 20px;">
+main() {
+
+}
+                </code></pre>
+            </p>
+            <p class = "apresentacao__paragrafo">
+                Todo e qualquer programa, se inicia pela função main. Toda e qualquer função, deve ser seguida por `()` se eles não tem nada nesses parênteses, quer dizer que não receber nada exterior. <br> <br>
+
+                Não esqueça que C é case sensitive, diferenciando minúsculas e maiúsculas.
+            </p> 
+
+            <h1 class = "apresentacao__titulo">Hello World</h1>
+            <p class = "apresentacao__paragrafo">
+                <pre> <code class="c" style = "border-radius: 20px;">
+#include <stdio.h>
+main() {
+	printf("Hello World");
+}
+                </code></pre>
+            </p>
+            <p class = "apresentacao__paragrafo">
+                1. Em C, sempre que quisermos tratar caracteres, devemos colocá-los entre "", não troque por '' 
+            <br> <br>
+                2. Uma das funções em C que permite a escrita na tela é a printf, sendo print + formatação. Como ela se trata de uma função, deve ter parênteses, nesse caso, passamos uma String de caracteres. O uso dessa função é permitido pela biblioteca stdio.h
+            <br> <br>
+                3. Em C, cada instrução deve ser termina por ;
+            <br> <br>
+                4. Arquivos que não tem código, apenas cabeçalhos de funções, são denominados header files e são seguidos de uma extensão .h
+            <br> <br>
+                O mesmo programa também poderia ser escrito de diferentes formas:
+
+                <pre> <code class="c" style = "border-radius: 20px;">
+// Forma 01
+#include <stdio.h>
+main () {
+	printf("Hello");
+	printf(" ");
+	printf("World"); 
+}
+
+// Forma 02
+#include <stdio.h>
+main () {
+	printf (
+		"Hello"
+	);
+	printf (   " " )
+	;
+	printf ("World");}
+                </code></pre>
+
+            </p> 
+
+            <h2 class = "apresentacao__subtitulo">Como pular uma linha</h2>
+            <p class = "apresentacao__paragrafo">
+                Para isso, utilizamos a sequência de escape New Line, representada por \n. Isso acontece porque a linguagem C não possui uma função específica para imprimir uma nova linha, como ocorre em algumas outras linguagens.
+
+                <pre> <code class="c" style = "border-radius: 20px;">
+#include <stdio.h>
+main(){
+	printf("Hello World\n");
+}
+                </code></pre>
+                O \n pode ser utilizado em qualquer ponto da string, assim como qualquer outro caractere.
+            </p>
+            <h2 class = "apresentacao__subtitulo">Como exibir aspas duplas</h2>
+            <p class = "apresentacao__paragrafo">
+                Para exibir aspas duplas dentro de uma string, colocamos uma barra invertida (\) antes delas. Dessa forma, elas deixam de ser interpretadas como delimitadores da string.
+                <pre> <code class="c" style = "border-radius: 20px;">
+#include <stdio.h>
+int main() {
+	printf("Hoje está um \"Lindo\" Dia\n");
+	return 0;
+}
+                </code></pre>
+            </p>
+            <h1 class = "apresentacao__titulo">O Caractere \</h1>
+            <p class = "apresentacao__paragrafo">
+                A barra invertida (\) é utilizada para criar sequências de escape, removendo o significado especial de determinados caracteres ou representando caracteres que não podem ser digitados diretamente.
+            </p>
+            <p class = "apresentacao__paragrafo">
+                <strong>\7 </strong>Bell: sinal sonoro do computador <br>
+                <strong>\a </strong>Bell: sinal sonoro do computador <br>
+                <strong>\b </strong>Backspace <br>
+                <strong>\n </strong>Nova linha (line feed) <br>
+                <strong>\r </strong> Retorno de carro (carriage return) <br>
+                <strong>\t </strong> Tabulação horizontal <br>
+                <strong>\v </strong> Tabulação vertical <br>
+                <strong>\\ </strong> Caractere \ literal <br>
+                <strong>\' </strong> Aspas simples (') <br>
+                <strong>\" </strong> Aspas duplas (") <br>
+                <strong>\? </strong> Caractere ? <br>
+                <strong>\ooo </strong> Caractere cujo código ASCII em octal é ooo <br>
+                <strong>\xnn </strong> Caractere cujo código ASCII em hexadecimal é nn <br>
+                <strong>%% </strong> Caractere % em cadeias de formatação <br>
+            </p>
+
+            <h1 class = "apresentacao__titulo"> Comentários</h1>
+            <p class = "apresentacao__paragrafo"> 
+                Comentários são ignorados pelo compilador e servem apenas para documentar o código-fonte. <br>
+                Em C, um comentário tradicional é qualquer sequência de caracteres delimitada por /* e */.
+            </p>
+            <h2 class = "apresentacao__subtitulo">Exemplo de Cabeçalho</h2>
+            <p class = "apresentacao__paragrafo">
+                <pre> <code class="c" style = "border-radius: 20px;">
+/* PROG0199.C :     Comentários e Companhia    */
+/* AUTOR      :     Luís Damas                 */
+/* DATA       :     01/11/1995                 */
+                </code></pre>
+            </p>
+            <p class = "apresentacao__paragrafo">
+                Comentários também podem ser inseridos dentro de expressões. Entretanto, essa prática geralmente reduz a legibilidade do código.
+                <pre> <code class="c" style = "border-radius: 20px;">
+printf("Olá mundo" /* Falta o \n */);
+                </code></pre>
+            </p>
+            
+            <p class = "apresentacao__paragrafo">
+                Existe apenas uma situação em que a sequência /* */ não é interpretada como comentário: quando ela aparece dentro de uma string. Nesse caso, ela perde seu significado especial.
+                <pre> <code class="c" style = "border-radius: 20px;">
+printf("Um comentário em C começa com /* e termina com */");
+                </code></pre>
+            </p>
+            <p class = "apresentacao__paragrafo">
+                Alguns compiladores oferecem suporte a comentários aninhados (nested comments), mas essa funcionalidade não faz parte do padrão tradicional da linguagem C.
+            </p>
+
+            <h1 class = "apresentacao__titulo">Resumo</h1>
+            <p class = "apresentacao__paragrafo">
+                Um programa em C inicia sua execução pela função main(), e todo o código pertencente a essa função deve ficar entre { }. Esse conjunto de instruções forma um bloco, e cada instrução deve terminar com um ponto e vírgula (;).
+                <br> <br>
+                A linguagem é sensível a maiúsculas e minúsculas (case-sensitive), e strings são escritas entre aspas duplas (").
+                <br> <br>
+                Para exibir informações na tela, utiliza-se a função printf(), disponibilizada pela biblioteca padrão stdio.h. Por isso, é necessário incluí-la por meio da diretiva #include.
+                <br> <br>
+                As diretivas iniciadas por # pertencem ao pré-processador e, diferentemente das instruções da linguagem, não terminam com ponto e vírgula.
+                <br> <br>
+                Caracteres especiais são representados por sequências de escape, iniciadas pela barra invertida (\). Já os comentários são delimitados por /* e */ e, em geral, não podem ser aninhados.
+            </p>
+        </main>
+    </div>
+    <footer class = "rodape">
+        <p> © 2026 Diego Tasso. Todos os direitos reservados.</p>
+        <p>Este é um produto privado e proprietário. A reprodução, distribuição, modificação ou compartilhamento deste material, total ou parcialmente, sem autorização prévia por escrito, é estritamente proibida.</p>
+        
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
