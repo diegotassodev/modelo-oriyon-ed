@@ -15,14 +15,14 @@
     text-decoration: none;
 }
 
-body {
-    background-color: var(--secondary-background-color);
-}
-
 .principal {
     display: flex;
     flex-direction: row;
     height: 100vh;
+}
+
+.cabecalho {
+    background-color: var(--secondary-background-color);
 }
 
 .cabecalho__sidebar {
@@ -31,10 +31,12 @@ body {
     width: 40vh;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .cabecalho__headerbar {
     display: none;
+    width: 100%;
 }
 
 .sidebar__titulo {
@@ -61,16 +63,16 @@ body {
 }
 
 .apresentacao {
-    margin-top: 10vh;
     padding: 10vh;
     background-color: var(--primary-background-color);
     width: 100%;
     color: var(--font-color);
     font-family: var(--primary-font);
-    flex-direction: column;
-    gap: 30px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 .apresentacao__titulo {
@@ -85,7 +87,7 @@ body {
     width: 20vh;
 }
 
-.apresentacao__resumos {
+.apresentacao__bloco {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -93,7 +95,7 @@ body {
     justify-content: center;
 }
 
-.apresentacao__pagina {
+.bloco__pagina {
     width: 35vh;
     display: flex;
     flex-direction: column;
@@ -125,7 +127,7 @@ body {
 }
 
 .rodape {
-    background-color: black;
+    background-color: #3a4656;
     padding: 20px 0 10px 0;
     color: var(--font-color);
     font-family: var(--primary-font);
@@ -141,6 +143,7 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
+        height: auto;
     }
     
     .cabecalho__sidebar {
@@ -152,10 +155,6 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        padding: 0px;
     }
 
-    .apresentacao {
-        margin: 2vh 2vh 2vh 2vh;
-    }
 }
