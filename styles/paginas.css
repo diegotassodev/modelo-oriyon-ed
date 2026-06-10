@@ -7,13 +7,10 @@
 }
 
 .principal {
-    display: flex;
-    flex-direction: row;
     height: auto;
 }
 
 .apresentacao {
-    margin-top: 10vh;
     padding: 10vh;
     background-color: var(--primary-background-color);
     width: 100%;
@@ -28,24 +25,28 @@
 
 .apresentacao__titulo {
     font-weight: 600;
-    font-size: 2em
+    font-size: 2rem;
 }
 
 .apresentacao__subtitulo {
     font-weight: 600;
-    font-size: 1.5em
+    font-size: 1.5rem;
 }
 
 .apresentacao__paragrafo {
-    font-size: 1em;
-}
-
-.apresentacao__imagem {
-    width: 20vh;
+    font-size: 1rem;
+    text-align: justify;
+    
 }
 
 .paragrafo__tabela td, .paragrafo__tabela th {
     text-align: center;
     border: 1px solid var(--font-color);
     padding: 4px;
+}
+
+@media (max-width: 600px) {
+    .apresentacao__titulo, .apresentacao__subtitulo, .apresentacao__paragrafo, .paragrafo__tabela {
+        padding: 10px;
+    }
 }

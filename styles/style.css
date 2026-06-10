@@ -25,19 +25,20 @@ body {
     height: 100vh;
 }
 
-.cabecalho {
+.cabecalho__sidebar {
     color: var(--font-color);
     font-family: var(--primary-font);
     width: 40vh;
-}
-
-.cabecalho__sidebar {
     display: flex;
     flex-direction: column;
 }
 
+.cabecalho__headerbar {
+    display: none;
+}
+
 .sidebar__titulo {
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-weight: 400;
     margin-left: 3vh;
     margin: 30px;
@@ -53,6 +54,10 @@ body {
 
 .sidebar__item:hover {
     background-color: #3a4656;
+}
+
+.cabecalho__sidebar-mobile {
+    display: none
 }
 
 .apresentacao {
@@ -73,7 +78,7 @@ body {
 }
 
 .apresentacao__paragrafo {
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .apresentacao__imagem {
@@ -84,6 +89,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 
 .apresentacao__pagina {
@@ -106,7 +113,7 @@ body {
 
 .pagina__link {
     color: var(--font-color);
-    font-size: 1.6em;
+    font-size: 1.6rem;
     border: 2px solid var(--font-color);
     border-radius: 10px;
     margin-top: 10px;
@@ -126,4 +133,29 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+@media (max-width: 800px) {
+    .principal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cabecalho__sidebar {
+        display:none;
+    }
+
+    .cabecalho__headerbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .apresentacao {
+        margin: 2vh 2vh 2vh 2vh;
+    }
 }
